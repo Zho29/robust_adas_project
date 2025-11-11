@@ -21,7 +21,7 @@ A high-performance object detection system combining Weather U-Net preprocessing
 - [Visualizations](#visualizations)
 - [Dataset](#dataset)
 - [Citation](#citation)
-- [Acknowledgments](#acknowledgments)
+
 
 ---
 
@@ -36,24 +36,15 @@ This approach achieves **109 FPS** on NVIDIA RTX A6000, making it suitable for r
 
 ### Why WUNet+YOLO?
 
-- ⚡ **Ultra-fast**: 109 FPS (9.18ms latency)
-- 🎯 **Efficient**: Only 110.6 GFLOPs
-- 🌧️ **Weather-robust**: Maintains 64-75% mAP across all conditions
-- 🔧 **Modular**: Easy to update and improve individual components
-- 🚀 **Real-time**: 3x faster than real-time requirements
+-  **Ultra-fast**: 109 FPS (9.18ms latency)
+-  **Efficient**: Only 110.6 GFLOPs
+-  **Weather-robust**: Maintains 64-75% mAP across all conditions
+-  **Modular**: Easy to update and improve individual components
+-  **Real-time**: 3x faster than real-time requirements
 
 ---
 
 ## 🏆 Key Results
-
-### Performance Metrics
-
-| Metric | Value | Description |
-|--------|-------|-------------|
-| **Latency** | 9.18 ms | Ultra-fast inference |
-| **FPS** | 109.0 | 3x real-time capability |
-| **FLOPs** | 110.6 G | Computational efficiency |
-| **Parameters** | 34.1 M | Model size |
 
 ### Detection Accuracy
 
@@ -65,11 +56,11 @@ This approach achieves **109 FPS** on NVIDIA RTX A6000, making it suitable for r
 
 ### Key Highlights
 
-- ✅ **109 FPS** - 3x faster than real-time (30 FPS)
-- ✅ **Weather Robust** - Minimal degradation in adverse conditions
-- ✅ **Efficient** - Only 110.6 GFLOPs computational cost
-- ✅ **Resilient to Rain** - Less than 2% accuracy drop
-- ✅ **Production Ready** - Suitable for embedded deployment
+-  **109 FPS** - 3x faster than real-time (30 FPS)
+-  **Weather Robust** - Minimal degradation in adverse conditions
+-  **Efficient** - Only 110.6 GFLOPs computational cost
+-  **Resilient to Rain** - Less than 2% accuracy drop
+-  **Production Ready** - Suitable for embedded deployment
 
 ---
 
@@ -230,9 +221,9 @@ Final Detections
 ### Real-Time Capability
 
 WUNet+YOLO exceeds real-time requirements by **3x**:
-- ✅ **109 FPS** achieved
-- ✅ **30 FPS** required for real-time
-- ✅ **3.6x margin** for multi-camera setups
+-  **109 FPS** achieved
+-  **30 FPS** required for real-time
+-  **3.6x margin** for multi-camera setups
 
 ### Applications Enabled
 
@@ -341,12 +332,16 @@ The system maintains strong performance across all weather scenarios:
 If you use this work in your research, please cite:
 
 ```bibtex
-@misc{wunet_yolo_weather,
-  title={WUNet+YOLO: High-Performance Object Detection in Adverse Weather Conditions},
-  author={Zho29},
-  year={2025},
-  publisher={GitHub},
-  url={https://github.com/Zho29/robust_adas_project}
-}
+@misc{shahzad2024robustadasenhancingrobustness,
+      title={Robust ADAS: Enhancing Robustness of Machine Learning-based Advanced Driver Assistance Systems for Adverse Weather}, 
+      author={Muhammad Zaeem Shahzad and Muhammad Abdullah Hanif and Muhammad Shafique},
+      year={2024},
+      eprint={2407.02581},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2407.02581}, 
+
 ```
+
+
 
