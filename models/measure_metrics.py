@@ -25,13 +25,13 @@ def load_real_wunet():
             try:
                 checkpoint = torch.load(checkpoint_path, map_location='cpu')
                 model.load_state_dict(checkpoint['model_state_dict'])
-                print(f"  ✅ Loaded from: {checkpoint_path}")
-                print(f"  ✅ Epoch: {checkpoint.get('epoch', 'N/A')}, Loss: {checkpoint.get('loss', 0):.6f}")
+                print(f"   Loaded from: {checkpoint_path}")
+                print(f"   Epoch: {checkpoint.get('epoch', 'N/A')}, Loss: {checkpoint.get('loss', 0):.6f}")
                 return model
             except Exception as e:
-                print(f"  ⚠️ Error: {e}")
+                print(f"   Error: {e}")
     
-    print("  ⚠️ No checkpoint found")
+    print("   No checkpoint found")
     return model
 
 
@@ -49,14 +49,14 @@ def load_yolo():
         for path in yolo_paths:
             if os.path.exists(path):
                 yolo = YOLO(path)
-                print(f"  ✅ Loaded from: {path}")
+                print(f"   Loaded from: {path}")
                 return yolo.model
         
         yolo = YOLO('yolov8n.pt')
-        print("  ✅ Loaded (default)")
+        print("   Loaded (default)")
         return yolo.model
     except Exception as e:
-        print(f"  ❌ Error: {e}")
+        print(f"   Error: {e}")
         return None
 
 
@@ -76,15 +76,15 @@ def load_dsnet():
             try:
                 checkpoint = torch.load(path, map_location='cpu')
                 model.load_state_dict(checkpoint['model_state_dict'])
-                print(f"  ✅ Loaded from: {path}")
-                print(f"  ✅ Epoch: {checkpoint['epoch']}, Loss: {checkpoint['loss']:.6f}")
+                print(f"   Loaded from: {path}")
+                print(f"   Epoch: {checkpoint['epoch']}, Loss: {checkpoint['loss']:.6f}")
                 if 'cls_loss' in checkpoint:
-                    print(f"  ✅ CLS Loss: {checkpoint['cls_loss']:.6f}")
+                    print(f"   CLS Loss: {checkpoint['cls_loss']:.6f}")
                 return model
             except Exception as e:
-                print(f"  ⚠️ Error: {e}")
+                print(f"   Error: {e}")
     
-    print("  ⚠️ No checkpoint found")
+    print("   No checkpoint found")
     return model
 
 
@@ -206,7 +206,7 @@ def main():
     with open('../results/metrics.json', 'w') as f:
         json.dump(results, f, indent=2)
     
-    print("\n✅ Saved: results/metrics.json")
+    print("\n Saved: results/metrics.json")
 
 
 if __name__ == '__main__':
