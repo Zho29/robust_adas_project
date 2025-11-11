@@ -1,0 +1,116 @@
+================================================================================
+COMPREHENSIVE COMPARISON SUMMARY
+================================================================================
+
+WINNER: WUNet
+================================================================================
+
+1. COMPUTATIONAL EFFICIENCY
+--------------------------------------------------------------------------------
+DSNet:
+   • Parameters:        32.4M
+   • FLOPs:            191.3 GFLOPs
+   • Latency:          27.60 ms
+   • FPS:              36.2
+
+WUNet+YOLO:
+   • Parameters:        34.1M
+   • FLOPs:            110.6 GFLOPs
+   • Latency:          9.18 ms
+   • FPS:              109.0
+
+WUNet is 3.01x FASTER (18.42ms saved)
+WUNet uses 42.2% fewer FLOPs (80.7 GFLOPs reduction)
+
+--------------------------------------------------------------------------------
+
+2. DETECTION ACCURACY (WUNet+YOLO)
+--------------------------------------------------------------------------------
+Weather Condition     | mAP@0.5    | mAP@0.5:0.95 | Degradation
+--------------------------------------------------------------------------------
+Normal                | 74.75%     | 49.46%       | -
+Heavy Fog             | 64.67%     | 40.93%       | -10.08%
+Heavy Rain            | 73.24%     | 48.20%       | -1.51%
+
+Note: DSNet mAP evaluation requires custom IoU-based implementation and was
+not measured in this comparison.
+
+--------------------------------------------------------------------------------
+
+3. KEY FINDINGS
+--------------------------------------------------------------------------------
+WUNet uses 42.2% fewer FLOPs
+WUNet achieves 109.0 FPS vs DSNet's 36.2 FPS
+Both models support real-time operation (>30 FPS)
+DSNet mAP requires custom implementation
+
+--------------------------------------------------------------------------------
+
+4. REAL-TIME CAPABILITY
+--------------------------------------------------------------------------------
+Both models exceed the 30 FPS threshold for real-time operation:
+   • DSNet:        36.2 FPS ✓ (Real-time capable)
+   • WUNet+YOLO:   109.0 FPS ✓ (3x real-time capable)
+
+WUNet+YOLO can process video at 109 FPS, making it suitable for high-speed
+applications and embedded systems.
+
+--------------------------------------------------------------------------------
+
+5. WEATHER ROBUSTNESS
+--------------------------------------------------------------------------------
+WUNet+YOLO maintains strong performance across all weather conditions:
+   • Normal:      74.75% mAP@0.5 (baseline)
+   • Heavy Fog:   64.67% mAP@0.5 (13.5% degradation)
+   • Heavy Rain:  73.24% mAP@0.5 (2.0% degradation)
+
+The model is particularly robust to rain conditions, with minimal accuracy loss.
+
+--------------------------------------------------------------------------------
+
+6. COMPUTATIONAL COST BREAKDOWN
+--------------------------------------------------------------------------------
+FLOPs Comparison:
+   • DSNet:         191.3 GFLOPs
+   • WUNet+YOLO:    110.6 GFLOPs
+   • Savings:       80.7 GFLOPs (42.2% reduction)
+
+Memory Footprint:
+   • DSNet:         32.4M parameters (~130 MB)
+   • WUNet+YOLO:    34.1M parameters (~136 MB)
+   • Difference:    +1.7M parameters (+5.0%)
+
+WUNet+YOLO Pipeline Breakdown:
+   • WUNet:         31.0M params, 106.5 GFLOPs, 9.11 ms (99.2% of latency)
+   • YOLO:          3.0M params, 4.1 GFLOPs, 0.07 ms (0.8% of latency)
+   • Total:         34.1M params, 110.6 GFLOPs, 9.18 ms
+
+--------------------------------------------------------------------------------
+
+7. SPEEDUP ANALYSIS
+--------------------------------------------------------------------------------
+Metric                | Value      | Description
+--------------------------------------------------------------------------------
+Latency Speedup       | 3.01x      | WUNet+YOLO is 3x faster
+FPS Speedup           | 3.01x      | WUNet+YOLO achieves 3x higher FPS
+FLOPs Reduction       | 42.2%      | WUNet+YOLO uses 42% fewer operations
+Params Reduction      | -5.0%      | DSNet has 5% fewer parameters
+
+--------------------------------------------------------------------------------
+
+CONCLUSION
+================================================================================
+
+WUNet+YOLO emerges as the better due to its:
+   • Superior computational efficiency (3x faster, 42% fewer FLOPs)
+   • Real-time performance capability (109 FPS)
+   • Strong weather robustness across all conditions
+   • Modular architecture allowing easy updates
+
+While DSNet offers a slightly smaller parameter count and end-to-end design,
+the significant speed and efficiency advantages of WUNet+YOLO make it the
+preferred choice for real-world deployment in autonomous driving systems.
+
+================================================================================
+
+
