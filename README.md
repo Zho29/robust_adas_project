@@ -244,30 +244,6 @@ WUNet+YOLO exceeds real-time requirements by **3x**:
 
 ---
 
-## 📈 Visualizations
-
-### 1. mAP Performance Across Weather
-![mAP Performance](models/comparison_map_performance.png)
-
-Detection accuracy across normal, fog, and rain conditions showing strong weather robustness.
-
-### 2. Computational Efficiency
-![Computational Efficiency](models/comparison_computational_efficiency.png)
-
-Breakdown of parameters, FLOPs, latency, and FPS metrics.
-
-### 3. Speedup Analysis
-![Speedup Analysis](models/comparison_speedup_analysis.png)
-
-Detailed latency distribution between WUNet and YOLO components.
-
-### 4. Performance Dashboard
-![Performance Dashboard](models/comparison_summary_dashboard.png)
-
-Complete overview of all performance metrics and comparisons.
-
----
-
 ## 📁 Project Structure
 
 ```
@@ -277,16 +253,16 @@ robust_adas_project/
 │   ├── yolo_data.py                    # YOLO data handling
 │   ├── train.py                        # WUNet training script
 │   ├── evaluate_yolo_final.py          # YOLO+WUNet evaluation
-│   ├── measure_metrics.py              # Performance measurement
-│   ├── visualize_comparison.py         # Visualization generator
+│   ├── measure_metrics.py              
+│   ├── visualize_comparison.py         
 │   ├── weather_augmenter.py            # Weather effects
 │   ├── weather_database.py             # Weather dataset handling
-│   ├── comprehensive_comparison_summary.txt  # Results summary
-│   └── comparison_*.png                # Visualizations
-├── convert_kitti_to_yolo.py            # Dataset conversion
-├── requirements.txt                     # Python dependencies
-├── .gitignore                          # Git ignore rules
-└── README.md                           # This file
+│   ├── comprehensive_comparison_summary.txt  
+│   └── comparison_*.png              
+├── convert_kitti_to_yolo.py           
+├── requirements.txt                     
+├── .gitignore                          
+└── README.md                           
 ```
 
 ---
@@ -374,70 +350,3 @@ If you use this work in your research, please cite:
 }
 ```
 
----
-
-## 🙏 Acknowledgments
-
-- **KITTI Dataset**: Vision benchmark suite for autonomous driving
-- **Ultralytics**: YOLOv8 implementation and framework
-- **imgaug**: Weather augmentation library
-- **THoP**: FLOPs calculation tool
-- **PyTorch**: Deep learning framework
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
-## 👥 Authors
-
-- **Zho29** - Implementation and evaluation
-
----
-
-## 📫 Contact
-
-For questions or collaboration:
-- GitHub: [@Zho29](https://github.com/Zho29)
-- Project: [robust_adas_project](https://github.com/Zho29/robust_adas_project)
-
----
-
-## 🔄 Recent Updates
-
-**November 2025**
-- ✅ Complete WUNet+YOLO pipeline implementation
-- ✅ Comprehensive weather robustness evaluation
-- ✅ Performance optimization (109 FPS achieved)
-- ✅ Publication-quality visualizations
-
-**Status**: ✅ Production Ready
-
----
-
-## 🎯 Future Work
-
-- [ ] Extend to more weather conditions (snow, night, haze)
-- [ ] Add temporal consistency for video processing
-- [ ] Optimize for embedded platforms (Jetson Nano/Xavier)
-- [ ] Implement real-time video demo
-- [ ] Add model quantization for faster inference
-- [ ] Create web interface for testing
-
----
-
-## 🌟 Highlights
-
-> **"109 FPS with 74% mAP - Ready for real-world deployment"**
-
-- 🚀 **3x Real-time**: Fast enough for multi-camera setups
-- 🌧️ **Weather Proof**: Robust across fog and rain
-- ⚡ **Efficient**: Low computational cost
-- 🔧 **Flexible**: Modular design for easy updates
-
----
-
-**Built for safer autonomous driving in all weather conditions** 🚗💨
